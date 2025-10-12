@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Contact = () => {
   return (
     <div
-      id="#contact"
+      id="contact"
       className="flex min-h-[70vh] min-w-full items-center justify-center"
     >
       <motion.div
