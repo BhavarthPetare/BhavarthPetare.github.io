@@ -17,7 +17,7 @@ const Hero = () => {
           <img
             src={image}
             alt="profile"
-            className="rounded-full w-[300px] cursor-pointer shadow-xl shadow-indigo-900 transition-all duration-300 hover:-translate-y-5 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-600 md:w-[350px]"
+            className="rounded-full w-[250px] cursor-pointer shadow-xl shadow-indigo-900 transition-all duration-300 hover:-translate-y-5 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-600 md:w-[300px]"
           />
         </motion.div>
         <motion.div
