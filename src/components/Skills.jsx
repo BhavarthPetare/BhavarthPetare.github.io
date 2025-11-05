@@ -1,7 +1,11 @@
 import React from "react";
 import {
+  BiLogoAngular,
+  BiLogoCPlusPlus,
   BiLogoJavascript,
   BiLogoMongodb,
+  BiLogoPostgresql,
+  BiLogoPython,
   BiLogoReact,
   BiLogoTailwindCss,
   BiLogoTypescript,
@@ -34,7 +38,7 @@ const Skills = () => {
           whileInView="visible"
           transition={{ duration: 1 }}
         >
-          <BiLogoTypescript className="cursor-pointer text-[80px] text-sky-500 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]" />
+          <BiLogoPostgresql className="cursor-pointer text-[80px] text-sky-500 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]" />
         </motion.div>
         <motion.div
           variants={variant}
@@ -67,6 +71,30 @@ const Skills = () => {
           transition={{ duration: 1 }}
         >
           <BiLogoMongodb className="cursor-pointer text-[80px] text-green-500 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]" />
+        </motion.div>
+        <motion.div
+          variants={variant}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 1 }}
+        >
+          <BiLogoPython className="cursor-pointer text-[80px] text-yellow-500 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]" />
+        </motion.div>
+        <motion.div
+          variants={variant}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 1 }}
+        >
+          <BiLogoCPlusPlus className="cursor-pointer text-[80px] text-blue-500 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]" />
+        </motion.div>
+        <motion.div
+          variants={variant}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 1 }}
+        >
+          <BiLogoAngular className="cursor-pointer text-[80px] text-red-500 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]" />
         </motion.div>
       </div>
     </div>
