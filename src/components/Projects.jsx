@@ -12,12 +12,14 @@ const projectsData = [
     description:
       "Real-Time Web Application for Chat Rooms. A platform for users to create and join chat rooms based on shared interests.",
     technologies: ["React", "CSS", "JavaScript"],
+    link: "https://www.google.com/"
   },
   {
     title: "Worqube",
     description:
       "Placement and TNP Management Platform. A streamlined placement process, increasing operational efficiency and data accuracy.",
     technologies: ["Node.js", "Express", "MongoDB", "React", "Supabase"],
+    link: "https://www.google.com/"
   },
 ];
 
@@ -58,6 +60,14 @@ const Projects = () => {
                 ))}
               </ul>
             </div>
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-3 m-3 rounded-lg bg-white text-black font-medium hover:bg-slate-400 transition"
+            >
+              View Project
+            </a>
           </motion.div>
         ))}
       </div>
