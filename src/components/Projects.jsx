@@ -60,14 +60,6 @@ const Projects = () => {
                 ))}
               </ul>
             </div>
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-5 py-3 m-3 rounded-lg bg-white text-black font-medium hover:bg-slate-400 transition"
-            >
-              View Project
-            </a>
           </motion.div>
         ))}
       </div>
