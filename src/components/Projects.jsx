@@ -12,7 +12,7 @@ const projectsData = [
     description:
       "Real-Time Web Application for Chat Rooms. A platform for users to create and join chat rooms based on shared interests.",
     technologies: ["React", "CSS", "JavaScript"],
-    link: "https://www.google.com/"
+    link: "https://curiohub.onrender.com"
   },
   {
     title: "Worqube",
