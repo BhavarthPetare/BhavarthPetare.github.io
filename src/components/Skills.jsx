@@ -8,7 +8,6 @@ import {
   BiLogoPython,
   BiLogoReact,
   BiLogoTailwindCss,
-  BiLogoTypescript,
 } from "react-icons/bi";
 import { motion } from "framer-motion";
 
