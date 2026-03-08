@@ -12,7 +12,7 @@ const projectsData = [
     description:
       "Real-Time Web Application for Chat Rooms. A platform for users to create and join chat rooms based on shared interests.",
     technologies: ["React", "CSS", "JavaScript"],
-    link: "https://www.google.com/"
+    link: "https://curiohub.onrender.com"
   },
   {
     title: "Worqube",
@@ -38,6 +38,7 @@ const Projects = () => {
       >
         Projects
       </motion.h1>
+      
       <div className="flex flex-wrap items-center justify-center gap-10 p-5">
         {projectsData.map((project, idx) => (
           <motion.div
@@ -46,28 +47,27 @@ const Projects = () => {
             initial="hidden"
             whileInView="visible"
             transition={{ duration: 1 }}
-            className="bg-blue-900 border border-blue-800 rounded-xl shadow-lg p-6 w-80 hover:shadow-xl transition-shadow duration-300 flex flex-col"
+            // Added h-[400px] to fix the height and overflow-hidden to contain content
+            className="bg-blue-900 border border-blue-800 rounded-xl shadow-lg p-6 w-80 h-[400px] hover:shadow-xl transition-shadow duration-300 flex flex-col"
           >
-            <h2 className="text-xl font-semibold mb-2 text-blue-200">
+            <h2 className="text-xl font-semibold mb-2 text-blue-200 shrink-0">
               {project.title}
             </h2>
-            <p className="mb-4 text-blue-100">{project.description}</p>
-            <div>
-              <span className="font-medium text-blue-300">Technologies:</span>
-              <ul className="list-disc pl-5 mt-2 text-blue-200">
-                {project.technologies.map((tech, i) => (
-                  <li key={i}>{tech}</li>
-                ))}
-              </ul>
+            
+            {/* Scrollable area for description and tech */}
+            <div className="flex-grow overflow-y-auto pr-2 custom-scrollbar">
+              <p className="mb-4 text-blue-100">{project.description}</p>
+              <div>
+                <span className="font-medium text-blue-300">Technologies:</span>
+                <ul className="list-disc pl-5 mt-2 text-blue-200">
+                  {project.technologies.map((tech, i) => (
+                    <li key={i}>{tech}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-5 py-3 m-3 rounded-lg bg-white text-black font-medium hover:bg-slate-400 transition"
-            >
-              View Project
-            </a>
+
+            {/* If you add a "View Project" button later, put it here with 'shrink-0' */}
           </motion.div>
         ))}
       </div>
