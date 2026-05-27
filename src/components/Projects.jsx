@@ -11,14 +11,14 @@ const projectsData = [
     description:
       "Real-Time Web Application for Chat Rooms. A platform for users to create and join chat rooms based on shared interests.",
     technologies: ["React", "CSS", "JavaScript", "Python", "MongoDB"],
-    link: "https://curiohub.onrender.com/"
+    link: "https://github.com/BhavarthPetare/CurioHub"
   },
   {
     title: "Worqube",
     description:
       "Placement and TNP Management Platform. A streamlined placement process, increasing operational efficiency and data accuracy.",
     technologies: ["Node.js", "Express", "MongoDB", "React", "Supabase"],
-    link: "https://www.google.com/"
+    link: "https://github.com/BhavarthPetare/worqube"
   },
 ];
 
