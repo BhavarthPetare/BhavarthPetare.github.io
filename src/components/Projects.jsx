@@ -1,9 +1,8 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 const variant = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0 },
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
 };
 
 const projectsData = [
@@ -11,8 +10,8 @@ const projectsData = [
     title: "CurioHub",
     description:
       "Real-Time Web Application for Chat Rooms. A platform for users to create and join chat rooms based on shared interests.",
-    technologies: ["React", "CSS", "JavaScript"],
-    link: "https://curiohub.onrender.com"
+    technologies: ["React", "CSS", "JavaScript", "Python", "MongoDB"],
+    link: "https://curiohub.onrender.com/"
   },
   {
     title: "Worqube",
@@ -38,26 +37,36 @@ const Projects = () => {
       >
         Projects
       </motion.h1>
-      
-      <div className="flex flex-wrap items-center justify-center gap-10 p-5">
+      <motion.div 
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={{
+          visible: {
+            transition: {
+              staggerChildren: 0.1
+            }
+          }
+        }}
+        className="flex flex-wrap items-stretch justify-center gap-10 p-5"
+      >
         {projectsData.map((project, idx) => (
           <motion.div
             key={idx}
-            variants={variant}
-            initial="hidden"
-            whileInView="visible"
-            transition={{ duration: 1 }}
-            // Added h-[400px] to fix the height and overflow-hidden to contain content
-            className="bg-blue-900 border border-blue-800 rounded-xl shadow-lg p-6 w-80 h-[400px] hover:shadow-xl transition-shadow duration-300 flex flex-col"
+            variants={{
+              hidden: { opacity: 0, scale: 0.9 },
+              visible: { opacity: 1, scale: 1 }
+            }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            whileHover={{ scale: 1.02, transition: { duration: 0.1 } }}
+            className="flex flex-col bg-blue-900 border border-blue-800 rounded-xl shadow-lg p-6 w-80 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300"
           >
-            <h2 className="text-xl font-semibold mb-2 text-blue-200 shrink-0">
-              {project.title}
-            </h2>
-            
-            {/* Scrollable area for description and tech */}
-            <div className="flex-grow overflow-y-auto pr-2 custom-scrollbar">
+            <div className="flex-grow">
+              <h2 className="text-xl font-semibold mb-2 text-blue-200">
+                {project.title}
+              </h2>
               <p className="mb-4 text-blue-100">{project.description}</p>
-              <div>
+              <div className="mb-6">
                 <span className="font-medium text-blue-300">Technologies:</span>
                 <ul className="list-disc pl-5 mt-2 text-blue-200">
                   {project.technologies.map((tech, i) => (
@@ -66,11 +75,17 @@ const Projects = () => {
                 </ul>
               </div>
             </div>
-
-            {/* If you add a "View Project" button later, put it here with 'shrink-0' */}
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-auto px-5 py-3 rounded-lg bg-white text-black font-medium text-center hover:bg-slate-400 transition"
+            >
+              View Project
+            </a>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
