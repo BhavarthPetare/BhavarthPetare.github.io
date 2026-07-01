@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 const Contact = () => {
@@ -10,7 +9,7 @@ const Contact = () => {
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, type: "spring" }}
+        transition={{ duration: 0.2, type: "spring" }}
         className="flex flex-col items-center justify-center gap-3 space-y-6 p-14"
       >
         <motion.h1 
@@ -26,7 +25,7 @@ const Contact = () => {
         <motion.p 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
+          transition={{ delay: 0.2 }}
           className="text-center text-lg font-semibold text-gray-500"
         >
           Send me an email
@@ -34,7 +33,7 @@ const Contact = () => {
         <motion.a
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
+          transition={{ delay: 0.2 }}
           whileHover={{ scale: 1.05 }}
           href="mailto: petarebhavarth@gmail.com"
           className="text-nowrap rounded-lg border border-indigo-600 bg-black px-5 py-3 text-lg font-bold text-white shadow-lg shadow-indigo-700 transition-all duration-300 hover:shadow-xl hover:shadow-indigo-600"
